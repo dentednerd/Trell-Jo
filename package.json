@@ -1,0 +1,24 @@
+{
+  "name": "w05-trello-board",
+  "version": "1.0.0",
+  "description": "In this two-day sprint you will be building a [Trello](https://trello.com/) clone. Trello is a popular application for managing tasks and projects, often used in agile software development. We will probably use Trello in our own project later in the course so please sign up with Trello now and explore its functionality.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./src",
+    "precommit": "npm run lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^3.17.0",
+    "eslint-plugin-jsx": "0.0.2",
+    "eslint-plugin-react": "^6.10.0",
+    "husky": "^0.13.2"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
