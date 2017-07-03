@@ -17,9 +17,9 @@ class ColumnAdd extends React.Component {
             <div className='FormBox'>
                 {
                     this.state.showForm
-                    ? <form>
+                    ? <form onSubmit={this.handleSubmit} >
                         <input className='ColumnAddForm' type="text"/>
-                        <button className='button is-success' onSubmit={this.handleSubmit} type="submit">Add</button>
+                        <button className='button is-success' type="submit">Add</button>
                         <a onClick={this.toggleForm} className='delete is-medium'></a>
                     </form>
                     : <a href="#" className="AddLink" onClick={this.toggleForm}>
