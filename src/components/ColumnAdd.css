@@ -1,0 +1,15 @@
+ .AddLink .ColumnAdd {
+     padding:10px;
+    color:#8c8c8c;
+    border-radius: 3px;
+    font-weight:normal;
+    font-size:14px;
+    width:100%;
+    text-align:left;
+}
+
+.AddLink .ColumnAdd:hover {
+    background-color: #8c8c8c;
+    color: black;
+    text-decoration: underline;
+}

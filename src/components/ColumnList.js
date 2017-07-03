@@ -1,15 +1,17 @@
 import React from 'react';
 
 import ColumnTitle from './ColumnTitle';
-import ColumnCards from './ColumnCards';
+import ColumnCardsList from './ColumnCardsList';
 import ColumnAdd from './ColumnAdd';
 
+import './ColumnList.css';
+
 class ColumnList extends React.Component {
-    render() {
+    render () {
         return (
-            <div>ColumnList
+            <div className="ColumnList">
                 <ColumnTitle />
-                <ColumnCards />
+                <ColumnCardsList />
                 <ColumnAdd />
             </div>
         );

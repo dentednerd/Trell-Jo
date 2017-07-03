@@ -4,10 +4,10 @@ import Title from './Title';
 import Columns from './Columns';
 
 class PageBody extends React.Component {
-    render() {
+    render () {
         return (
-            <div>Page body
-                   <Title />
+            <div>
+                 <Title />
                 <Columns />
             </div>
         );

@@ -7,7 +7,7 @@ class Columns extends React.Component {
     render() {
         return (
             <div>
-                    <div>Columns
+                    <div>
                         <Column />
                         <AddColumn />
                     </div>

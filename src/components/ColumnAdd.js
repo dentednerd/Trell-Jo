@@ -1,9 +1,15 @@
 import React from 'react';
 
+import './ColumnAdd.css';
+
 class ColumnAdd extends React.Component {
     render () {
         return (
-            <div>Add</div>
+            <a href="#" className="AddLink">
+                <div className="ColumnAdd">
+                    Add a card...
+                </div>
+            </a>
         );
     }
 }
