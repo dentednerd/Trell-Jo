@@ -6,7 +6,7 @@ class ColumnTitle extends React.Component {
     render () {
         return (
             <div className="ColumnTitle">
-                <h1>Title</h1>
+                <h1>{this.props.title}</h1>
                     {/*needs to be an input*/}
             </div>
 

@@ -1,26 +1,30 @@
 import React from 'react';
 
 import ColumnList from './ColumnList';
+import CreateColumn from './CreateColumn';
 
 import './Columns.css';
 
-
 class Column extends React.Component {
-    render () {
+    render() {
         return (
             <div className="columns">
-                <div className="column">
+                    {this.props.lists.map((list) => {
+                        return (<div className="column is-3">
+                            <ColumnList list={list}/>
+                        </div>);
+                    })}
+
+                <div className="column is-3">
+                    <CreateColumn />
+                </div>
+
+                {/*<div className="column">
                     <ColumnList />
                 </div>
                 <div className="column">
                     <ColumnList />
-                </div>
-                <div className="column">
-                    <ColumnList />
-                </div>
-                <div className="column">
-                    <ColumnList />
-                </div>
+                </div>*/}
             </div>
         );
     }

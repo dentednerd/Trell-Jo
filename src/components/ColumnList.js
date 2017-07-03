@@ -10,8 +10,8 @@ class ColumnList extends React.Component {
     render () {
         return (
             <div className="ColumnList">
-                <ColumnTitle />
-                <ColumnCardsList />
+                <ColumnTitle title={this.props.list.title}/>
+                <ColumnCardsList cards={this.props.list.cards}/>
                 <ColumnAdd />
             </div>
         );

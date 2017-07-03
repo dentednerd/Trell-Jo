@@ -1,3 +1,6 @@
 .box {
-    margin:10px;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 6px;
+    padding: 5px;
 }

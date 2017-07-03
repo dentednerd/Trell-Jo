@@ -5,10 +5,14 @@ import ColumnCard from './ColumnCard';
 import './ColumnCardsList.css';
 
 class ColumnCardsList extends React.Component {
-    render () {
+    render() {
         return (
-            <div>
-                <ColumnCard />
+            <div className='columnListBox'>
+                {this.props.cards.map((card) => {
+                    return (
+                        <ColumnCard card={card}/>
+                    )
+                })}
             </div>
         );
     }

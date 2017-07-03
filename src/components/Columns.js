@@ -1,15 +1,37 @@
 import React from 'react';
 
 import Column from './Column';
-import AddColumn from './AddColumn';
+// import CreateColumn from './CreateColumn';
 
 class Columns extends React.Component {
-    render() {
+    constructor (props) {
+        super (props);
+        this.state = {
+           lists: [
+                {
+                    title: 'title',
+                    cards: [
+                        'text',
+                        'text',
+                        'text'
+                    ]
+                },
+                {
+                    title: 'title',
+                    cards: [
+                        'text',
+                        'text',
+                        'text'
+                    ]
+                }
+            ]
+        };
+    }
+    render () {
         return (
             <div>
                     <div>
-                        <Column />
-                        <AddColumn />
+                        <Column lists={this.state.lists}/>
                     </div>
                 </div>
         );
