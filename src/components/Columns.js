@@ -26,15 +26,19 @@ class Columns extends React.Component {
                 }
             ]
         };
+        this.updateCards = this.updateCards.bind(this);
     }
     render () {
         return (
             <div>
                     <div>
-                        <Column lists={this.state.lists}/>
+                        <Column updateCards={this.updateCards} lists={this.state.lists}/>
                     </div>
                 </div>
         );
+    }
+    updateCards () {
+        console.log('Im working')
     }
 }
 

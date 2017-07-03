@@ -12,7 +12,7 @@ class ColumnList extends React.Component {
             <div className="ColumnList">
                 <ColumnTitle title={this.props.list.title}/>
                 <ColumnCardsList cards={this.props.list.cards}/>
-                <ColumnAdd />
+                <ColumnAdd updateCards={this.props.updateCards} />
             </div>
         );
     }

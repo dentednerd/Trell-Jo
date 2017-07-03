@@ -11,7 +11,7 @@ class Column extends React.Component {
             <div className="columns">
                     {this.props.lists.map((list) => {
                         return (<div className="column is-3">
-                            <ColumnList list={list}/>
+                            <ColumnList updateCards={this.props.updateCards} list={list}/>
                         </div>);
                     })}
 
