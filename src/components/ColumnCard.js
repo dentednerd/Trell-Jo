@@ -2,16 +2,16 @@ import React from 'react';
 
 import './ColumnCard.css';
 
-class ColumnCardsList extends React.Component {
+class ColumnCard extends React.Component {
     render () {
         return (
             <a href='#'>
             <div className='box'>
-                {this.props.card}
+                {this.props.card.text}
             </div>
             </a>
         );
     }
 }
 
-export default ColumnCardsList;
+export default ColumnCard;

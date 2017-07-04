@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 import PageBody from './PageBody';
 
 class App extends React.Component {
-    render() {
+    render () {
         return (
             <div>
                 <NavBar />

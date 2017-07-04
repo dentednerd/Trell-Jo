@@ -2,7 +2,7 @@ import React from 'react';
 
 
 class Title extends React.Component {
-    render() {
+    render () {
         return (
             <div>Menu</div>
         );
