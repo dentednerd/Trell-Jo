@@ -3,14 +3,39 @@ import React from 'react';
 import './ColumnTitle.css';
 
 class ColumnTitle extends React.Component {
-    render () {
+    constructor(props) {
+        super(props);
+        this.state = {
+            editable: false
+        };
+        this.toggleEdit = this.toggleEdit.bind(this);
+        this.editTitle = this.editTitle.bind(this);
+    }
+    render() {
         return (
             <div className="ColumnTitle">
-                <h1>{this.props.title}</h1>
-                    {/*needs to be an input*/}
+                {
+                    this.state.editable
+                        ? <form onBlur={this.toggleEdit}>
+                            <input onChange={this.editTitle} type="text" className='editTitle' placeholder={`${this.props.title}`} />
+                        </form>
+                        : <a href='#' onClick={this.toggleEdit}>
+                            <h1>{this.props.title}</h1>
+                        </a>
+                }
+
             </div>
 
         );
+    }
+    toggleEdit() {
+        this.setState({
+            editable: !this.state.editable
+        });
+    }
+    editTitle (event) {
+        event.preventDefault();
+        this.props.editListTitle(event.target.value, this.props.id);
     }
 }
 

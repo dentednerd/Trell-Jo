@@ -58,12 +58,13 @@ class Columns extends React.Component {
         };
         this.updateCards = this.updateCards.bind(this);
         this.addAList = this.addAList.bind(this);
+        this.editListTitle = this.editListTitle.bind(this);
     }
     render () {
         return (
             <div>
                 <div>
-                    <Column addAList={this.addAList} updateCards={this.updateCards} lists={this.state.lists} />
+                    <Column editListTitle={this.editListTitle} addAList={this.addAList} updateCards={this.updateCards} lists={this.state.lists} />
                 </div>
             </div>
         );
@@ -89,6 +90,14 @@ class Columns extends React.Component {
         this.setState ({
             lists: this.state.lists.concat(formattedList)
         });
+    }
+    editListTitle (newTitle, id) {
+        const index = findIndex(this.state.lists, id);
+        const listToEdit = this.state.lists;
+        listToEdit[index].title = newTitle;
+        this.setState ({
+            lists: listToEdit
+        })
     }
 }
 

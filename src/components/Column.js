@@ -12,7 +12,7 @@ class Column extends React.Component {
             <div className="columns">
                     {this.props.lists.map((list) => {
                         return (<div className="column is-3" key={list.id}>
-                            <ColumnList updateCards={this.props.updateCards} list={list}/>
+                            <ColumnList editListTitle={this.props.editListTitle} updateCards={this.props.updateCards} list={list}/>
                         </div>);
                     })}
 
