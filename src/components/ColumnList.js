@@ -24,6 +24,7 @@ ColumnList.propTypes = {
     editListTitle: PropTypes.func.isRequired,
     list: PropTypes.object.isRequired,
     updateCards: PropTypes.func.isRequired,
+    editCard: PropTypes.func.isRequired
 };
 
 export default ColumnList;

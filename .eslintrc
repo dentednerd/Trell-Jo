@@ -28,7 +28,7 @@
         "space-infix-ops": 1,
         "space-in-parens": 1,
         "spaced-comment": 1,
-        "space-before-function-paren": 1,
+        "space-before-function-paren": 0,
         "semi": 1,
         "quotes": ["error", "single"],
         "object-curly-spacing": 1,

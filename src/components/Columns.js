@@ -112,7 +112,7 @@ class Columns extends React.Component {
         const formattedComment = {
             id: cardIndex,
             text: text
-        }
+        };
         listToEdit[listIndex].cards[cardIndex] = formattedComment;
         this.setState ({
             lists: listToEdit

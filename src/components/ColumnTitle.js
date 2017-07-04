@@ -43,6 +43,8 @@ class ColumnTitle extends React.Component {
 
 ColumnTitle.propTypes = {
     title: PropTypes.string.isRequired,
+    editListTitle: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequred
 };
 
 export default ColumnTitle;
