@@ -4,13 +4,14 @@ import './ColumnCard.css';
 import PropTypes from 'prop-types';
 
 class ColumnCard extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.state = {
             textEditorVisible: false
         };
         this.makeTextEditorVisible = this.makeTextEditorVisible.bind(this);
         this.updateCard = this.updateCard.bind(this);
+        this.handleEnterKeyPress = this.handleEnterKeyPress.bind(this);
     }
     render() {
         return (
@@ -21,17 +22,17 @@ class ColumnCard extends React.Component {
                             ? <div className="modal is-active">
                                 <div className="modal-background"></div>
                                 <div className="modal-card">
-                                        <form onSubmit={this.updateCard}>
-                                    <section className='modal-card-body'>
-                                            <textarea>
+                                    <form onSubmit={this.updateCard}>
+                                        <section className='modal-card-body'>
+                                            <textarea onKeyPress={this.handleEnterKeyPress}>
                                                 {this.props.card.text}
-                                                </textarea>
-                                    </section>
-                                    <footer className='modal-card-foot'>
+                                            </textarea>
+                                        </section>
+                                        <footer className='modal-card-foot'>
                                             <button className='button is-success'>Save</button>
-                                        <button onClick={this.makeTextEditorVisible} className="modal-close is-large"></button>
-                                    </footer>
-                                        </form>
+                                            <button onClick={this.makeTextEditorVisible} className="modal-close is-large"></button>
+                                        </footer>
+                                    </form>
                                 </div>
                             </div>
                             : <div className='box'>
@@ -53,10 +54,16 @@ class ColumnCard extends React.Component {
             textEditorVisible: !this.state.textEditorVisible
         });
     }
-    updateCard (event) {
+    updateCard(event) {
         event.preventDefault();
         const newText = event.target[0].value;
         this.props.editCard(newText, this.props.id, this.props.card.id);
+    }
+
+    handleEnterKeyPress (e) {
+        if (e && e.key == 'Enter') {
+            this.props.editCard(document.forms[0].childNodes[0].value, this.props.id, this.props.card.id);
+        }
     }
 }
 
