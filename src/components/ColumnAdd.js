@@ -7,7 +7,7 @@ class ColumnAdd extends React.Component {
         super(props);
         this.state = {
             showForm: false
-        }
+        };
         this.toggleForm = this.toggleForm.bind(this);
                 this.handleSubmit = this.handleSubmit.bind(this);
         
