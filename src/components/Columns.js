@@ -67,8 +67,26 @@ class Columns extends React.Component {
                 </div>
         );
     }
-    updateCards () {
-        console.log('Im working')
+    updateCards (newCard, id) {
+        function findIndex(lists, id) {
+                for (let i = 0; i < lists.length; i++) {
+                    if (lists[i].id === id) {
+                        return i;
+                    }
+                }
+        }
+        const newCardFormatted = {
+            id: v4(),
+            text: newCard
+        };
+        const index = findIndex(this.state.lists, id);
+        const a = this.state.lists;
+        a[index].cards.push(newCardFormatted);
+        console.log(a);
+        this.setState({
+            lists: a
+        });
+
     }
 }
 

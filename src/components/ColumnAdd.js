@@ -36,8 +36,10 @@ class ColumnAdd extends React.Component {
             showForm: !this.state.showForm
         });
     }
-    handleSubmit () {
-        console.log('hi');
+    handleSubmit (event) {
+        event.preventDefault();
+        const newCard = event.target.children[0].value;
+        this.props.updateCards(newCard, this.props.id);
     }
 }
 
