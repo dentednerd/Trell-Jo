@@ -17,7 +17,7 @@ class Column extends React.Component {
                     })}
 
                 <div className="column is-3">
-                    <CreateColumn />
+                    <CreateColumn addAList={this.props.addAList}/>
                 </div>
             </div>
         );
@@ -26,7 +26,8 @@ class Column extends React.Component {
 
 Column.propTypes = {
     lists: PropTypes.array.isRequired,
-    updateCards: PropTypes.func.isRequired
+    updateCards: PropTypes.func.isRequired,
+    addAList: PropTypes.func.isRequired
 };
 
 export default Column;

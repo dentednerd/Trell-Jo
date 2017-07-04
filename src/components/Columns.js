@@ -3,13 +3,13 @@ import React from 'react';
 import Column from './Column';
 // import CreateColumn from './CreateColumn';
 
-import {v4} from 'uuid';
+import { v4 } from 'uuid';
 
 class Columns extends React.Component {
-    constructor (props) {
-        super (props);
+    constructor(props) {
+        super(props);
         this.state = {
-           lists: [
+            lists: [
                 {
                     id: v4(),
                     title: 'title',
@@ -57,24 +57,18 @@ class Columns extends React.Component {
             ]
         };
         this.updateCards = this.updateCards.bind(this);
+        this.addAList = this.addAList.bind(this);
     }
     render () {
         return (
             <div>
-                    <div>
-                        <Column updateCards={this.updateCards} lists={this.state.lists}/>
-                    </div>
+                <div>
+                    <Column addAList={this.addAList} updateCards={this.updateCards} lists={this.state.lists} />
                 </div>
+            </div>
         );
     }
     updateCards (newCard, id) {
-        function findIndex(lists, id) {
-                for (let i = 0; i < lists.length; i++) {
-                    if (lists[i].id === id) {
-                        return i;
-                    }
-                }
-        }
         const newCardFormatted = {
             id: v4(),
             text: newCard
@@ -82,11 +76,27 @@ class Columns extends React.Component {
         const index = findIndex(this.state.lists, id);
         const a = this.state.lists;
         a[index].cards.push(newCardFormatted);
-        console.log(a);
         this.setState({
             lists: a
         });
+    }
+    addAList (listTitle) {
+        const formattedList = {
+            id: v4(),
+            title: listTitle,
+            cards: []
+        };
+        this.setState ({
+            lists: this.state.lists.concat(formattedList)
+        });
+    }
+}
 
+function findIndex (lists, id) {
+    for (let i = 0; i < lists.length; i++) {
+        if (lists[i].id === id) {
+            return i;
+        }
     }
 }
 

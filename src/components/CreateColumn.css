@@ -9,3 +9,16 @@
         background-color: #E2E4E6;
         border-radius: 3px;
 }
+
+.listAdd {
+    background-color:#026AA7;
+    width: 100%;
+    border-radius: 3px;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.listAdd:hover {
+    background-color: #015996;
+}
