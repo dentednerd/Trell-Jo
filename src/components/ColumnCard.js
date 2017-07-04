@@ -8,6 +8,9 @@ class ColumnCard extends React.Component {
             <a href='#'>
             <div className='box'>
                 {this.props.card.text}
+                <span className="icon is-small">
+                    <i className="fa fa-pencil"></i>
+                </span>
             </div>
             </a>
         );
