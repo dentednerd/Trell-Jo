@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './CreateColumn.css';
 
@@ -42,5 +43,10 @@ class CreateColumn extends React.Component {
         });
     }
 }
+
+
+CreateColumn.propTypes = {
+    addAList: PropTypes.func.isRequired,
+};
 
 export default CreateColumn;

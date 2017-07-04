@@ -1,9 +1,10 @@
 import React from 'react';
 
 import './ColumnCard.css';
+import PropTypes from 'prop-types';
 
 class ColumnCard extends React.Component {
-    constructor(props) {
+    constructor (props) {
         super(props);
         this.state = {
             textEditorVisible: false
@@ -58,5 +59,12 @@ class ColumnCard extends React.Component {
         this.props.editCard(newText, this.props.id, this.props.card.id);
     }
 }
+
+
+ColumnCard.propTypes = {
+    id: PropTypes.string.isRequired,
+    card: PropTypes.object.isRequired,
+    editCard: PropTypes.func.isRequired
+};
 
 export default ColumnCard;

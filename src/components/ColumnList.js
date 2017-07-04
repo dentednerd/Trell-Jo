@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import ColumnTitle from './ColumnTitle';
 import ColumnCardsList from './ColumnCardsList';
@@ -17,5 +18,12 @@ class ColumnList extends React.Component {
         );
     }
 }
+
+
+ColumnList.propTypes = {
+    editListTitle: PropTypes.func.isRequired,
+    list: PropTypes.object.isRequired,
+    updateCards: PropTypes.func.isRequired,
+};
 
 export default ColumnList;

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './ColumnTitle.css';
+import PropTypes from 'prop-types';
 
 class ColumnTitle extends React.Component {
     constructor(props) {
@@ -38,5 +39,10 @@ class ColumnTitle extends React.Component {
         this.props.editListTitle(event.target.value, this.props.id);
     }
 }
+
+
+ColumnTitle.propTypes = {
+    title: PropTypes.string.isRequired,
+};
 
 export default ColumnTitle;

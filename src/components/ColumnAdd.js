@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './ColumnAdd.css';
+import PropTypes from 'prop-types';
 
 class ColumnAdd extends React.Component {
     constructor (props) {
@@ -42,5 +43,11 @@ class ColumnAdd extends React.Component {
         this.props.updateCards(newCard, this.props.id);
     }
 }
+
+
+ColumnAdd.propTypes = {
+    id: PropTypes.string.isRequired,
+    updateCards: PropTypes.func.isRequired
+};
 
 export default ColumnAdd;

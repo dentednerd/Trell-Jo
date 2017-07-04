@@ -10,7 +10,6 @@ class ColumnCardsList extends React.Component {
         return (
             <div className='columnListBox'>
                 {this.props.cards.map((card) => {
-                        console.log(card)
                     return (
                         <ColumnCard editCard={this.props.editCard} id={this.props.id} key={card.id} card={card}/>
                     );
@@ -21,7 +20,9 @@ class ColumnCardsList extends React.Component {
 }
 
 ColumnCardsList.propTypes = {
-    cards: PropTypes.array.isRequired
+    cards: PropTypes.array.isRequired,
+    editCard: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired
 };
 
 export default ColumnCardsList;

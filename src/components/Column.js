@@ -32,7 +32,8 @@ Column.propTypes = {
     lists: PropTypes.array.isRequired,
     updateCards: PropTypes.func.isRequired,
     addAList: PropTypes.func.isRequired,
-    editCard: PropTypes.func.isRequired
+    editCard: PropTypes.func.isRequired,
+    editListTitle: PropTypes.func.isRequired
 };
 
 export default Column;
