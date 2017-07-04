@@ -12,7 +12,11 @@ class Column extends React.Component {
             <div className="columns">
                     {this.props.lists.map((list) => {
                         return (<div className="column is-3" key={list.id}>
-                            <ColumnList editListTitle={this.props.editListTitle} updateCards={this.props.updateCards} list={list}/>
+                            <ColumnList 
+                            editListTitle={this.props.editListTitle}
+                            editCard={this.props.editCard}
+                            updateCards={this.props.updateCards} 
+                            list={list}/>
                         </div>);
                     })}
 
@@ -27,7 +31,8 @@ class Column extends React.Component {
 Column.propTypes = {
     lists: PropTypes.array.isRequired,
     updateCards: PropTypes.func.isRequired,
-    addAList: PropTypes.func.isRequired
+    addAList: PropTypes.func.isRequired,
+    editCard: PropTypes.func.isRequired
 };
 
 export default Column;

@@ -11,7 +11,7 @@ class ColumnList extends React.Component {
         return (
             <div className="ColumnList">
                 <ColumnTitle editListTitle={this.props.editListTitle} id={this.props.list.id} title={this.props.list.title}/>
-                <ColumnCardsList cards={this.props.list.cards}/>
+                <ColumnCardsList cards={this.props.list.cards} editCard={this.props.editCard} id={this.props.list.id}/>
                 <ColumnAdd id={this.props.list.id} updateCards={this.props.updateCards} />
             </div>
         );
