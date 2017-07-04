@@ -61,21 +61,21 @@ class Columns extends React.Component {
         this.editListTitle = this.editListTitle.bind(this);
         this.editCard = this.editCard.bind(this);
     }
-    render () {
+    render() {
         return (
             <div>
                 <div>
-                    <Column 
-                    editListTitle={this.editListTitle} 
-                    addAList={this.addAList} 
-                    updateCards={this.updateCards} 
-                    editCard={this.editCard}
-                    lists={this.state.lists} />
+                    <Column
+                        editListTitle={this.editListTitle}
+                        addAList={this.addAList}
+                        updateCards={this.updateCards}
+                        editCard={this.editCard}
+                        lists={this.state.lists} />
                 </div>
             </div>
         );
     }
-    updateCards (newCard, id) {
+    updateCards(newCard, id) {
         const newCardFormatted = {
             id: v4(),
             text: newCard
@@ -87,25 +87,25 @@ class Columns extends React.Component {
             lists: a
         });
     }
-    addAList (listTitle) {
+    addAList(listTitle) {
         const formattedList = {
             id: v4(),
             title: listTitle,
             cards: []
         };
-        this.setState ({
+        this.setState({
             lists: this.state.lists.concat(formattedList)
         });
     }
-    editListTitle (newTitle, id) {
+    editListTitle(newTitle, id) {
         const index = findIndex(this.state.lists, id);
         const listToEdit = this.state.lists;
         listToEdit[index].title = newTitle;
-        this.setState ({
+        this.setState({
             lists: listToEdit
         });
     }
-    editCard (text, listId, cardId) {
+    editCard(text, listId, cardId) {
         const listIndex = findIndex(this.state.lists, listId);
         const cardIndex = findIndex(this.state.lists[listIndex].cards, cardId);
         const listToEdit = this.state.lists;
@@ -114,13 +114,13 @@ class Columns extends React.Component {
             text: text
         };
         listToEdit[listIndex].cards[cardIndex] = formattedComment;
-        this.setState ({
+        this.setState({
             lists: listToEdit
         });
     }
 }
 
-function findIndex (lists, id) {
+function findIndex(lists, id) {
     for (let i = 0; i < lists.length; i++) {
         if (lists[i].id === id) {
             return i;
