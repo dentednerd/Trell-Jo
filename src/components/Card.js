@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './ColumnCard.css';
+import './Card.css';
 import PropTypes from 'prop-types';
 
-class ColumnCard extends React.Component {
+class Card extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,7 +24,7 @@ class ColumnCard extends React.Component {
                                 <div className="modal-card">
                                     <form onSubmit={this.updateCard}>
                                         <section className='modal-card-body'>
-                                            <textarea onKeyPress={this.handleEnterKeyPress}>
+                                            <textarea onKeyPress={this.handleEnterKeyPress} className="editCard">
                                                 {this.props.card.text}
                                             </textarea>
                                         </section>
@@ -68,10 +68,10 @@ class ColumnCard extends React.Component {
 }
 
 
-ColumnCard.propTypes = {
+Card.propTypes = {
     id: PropTypes.string.isRequired,
     card: PropTypes.object.isRequired,
     editCard: PropTypes.func.isRequired
 };
 
-export default ColumnCard;
+export default Card;

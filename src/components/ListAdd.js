@@ -20,7 +20,7 @@ class ListAdd extends React.Component {
             <div className='FormBox'>
                 {
                     this.state.showForm
-                    ? <form onSubmit={this.handleSubmit} >
+                    ? <form className="ListForm" onSubmit={this.handleSubmit} >
                         <textarea className='ListAddForm' onKeyPress={this.handleEnterKeyPress}/>
                         <button className='button is-success' type="submit">Add</button>
                         <a onClick={this.toggleForm} className='delete is-large'></a>

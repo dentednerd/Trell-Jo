@@ -20,7 +20,7 @@ class CreateList extends React.Component {
                         ? <form onSubmit={this.submitHandler} className='CreateList'>
                             <input className='CreateListInput' type='text' placeholder='Add a list' />
                             <button className='button is-success'>Save</button>
-                             <a onClick={this.toggleForm} className='delete is-medium'></a>
+                             <a onClick={this.toggleForm} className='delete is-large'></a>
                         </form>
                         : <a href='#' className='AddList' onClick={this.toggleForm}>
                             <div className='listAdd'>

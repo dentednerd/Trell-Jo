@@ -3,6 +3,7 @@
   flex-flow: row nowrap;
   justify-content:center;
   align-items: center;
+  box-shadow: 1px 1px 5px #444;
 }
 
 nav h1 {

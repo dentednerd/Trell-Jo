@@ -7,8 +7,13 @@
 }
 
 .CreateList {
-        background-color: #E2E4E6;
-        border-radius: 3px;
+    background-color: #E2E4E6;
+    border-radius: 3px;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    align-items: center;
+    box-shadow: 1px 1px 3px #444;
 }
 
 .listAdd {
@@ -18,6 +23,7 @@
     padding: 10px;
     color: white;
     font-size: 14px;
+    box-shadow: 1px 1px 3px #444;
 }
 
 .listAdd:hover {

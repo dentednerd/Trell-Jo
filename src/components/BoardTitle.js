@@ -20,7 +20,7 @@ class BoardTitle extends React.Component {
                 ? <form onBlur={this.toggleEditable}>
                     <input type="text" onChange={this.editTitle} className="titleInput" placeholder={this.state.pageTitle}></input>
                 </form>
-                : <button className="button" onClick={this.toggleEditable}>{this.state.pageTitle}</button>
+                : <button className="button listTitle" onClick={this.toggleEditable}>{this.state.pageTitle}</button>
                 
                 }
             </div>

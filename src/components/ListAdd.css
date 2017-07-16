@@ -21,6 +21,9 @@
     border-radius:3px;
     border:none;
     padding: 10px 5px;
+}
+
+.ListForm {
     display:flex;
     flex-flow:row wrap;
     justify-content:space-between;

@@ -35,4 +35,10 @@ textarea {
     resize: none;
     width: 100%;
     height: 100px;
-    }
+}
+
+.editCard {
+    border:none;
+    border-radius:3px;
+    font-size:16px;
+}

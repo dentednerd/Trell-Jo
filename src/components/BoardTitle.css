@@ -4,7 +4,7 @@
 
 .title-bar .button {
     font: normal 20px Pacifico, cursive;
-    background-color: rgb(0, 121, 191);
+    background-color: transparent;
     color: #fff;
     border:none;
     padding: 0 8px;

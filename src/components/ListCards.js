@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ColumnCard from './ColumnCard';
+import Card from './Card';
 
 import './ListCards.css';
 
@@ -11,7 +11,7 @@ class ListCards extends React.Component {
             <div className='ListCards'>
                 {this.props.cards.map((card) => {
                     return (
-                        <ColumnCard editCard={this.props.editCard} id={this.props.id} key={card.id} card={card}/>
+                        <Card editCard={this.props.editCard} id={this.props.id} key={card.id} card={card}/>
                     );
                 })}
             </div>
