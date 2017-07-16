@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './CreateColumn.css';
+import './CreateList.css';
 
-class CreateColumn extends React.Component {
+class CreateList extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
@@ -17,8 +17,8 @@ class CreateColumn extends React.Component {
             <div >
                 {
                     this.state.showForm
-                        ? <form onSubmit={this.submitHandler} className='CreateColumnList'>
-                            <input className='CreateColumnInput' type='text' placeholder='Add a list' />
+                        ? <form onSubmit={this.submitHandler} className='CreateList'>
+                            <input className='CreateListInput' type='text' placeholder='Add a list' />
                             <button className='button is-success'>Save</button>
                              <a onClick={this.toggleForm} className='delete is-medium'></a>
                         </form>
@@ -45,8 +45,8 @@ class CreateColumn extends React.Component {
 }
 
 
-CreateColumn.propTypes = {
+CreateList.propTypes = {
     addAList: PropTypes.func.isRequired,
 };
 
-export default CreateColumn;
+export default CreateList;

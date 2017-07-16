@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './ColumnTitle.css';
+import './ListTitle.css';
 import PropTypes from 'prop-types';
 
-class ColumnTitle extends React.Component {
+class ListTitle extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -14,7 +14,7 @@ class ColumnTitle extends React.Component {
     }
     render() {
         return (
-            <div className="ColumnTitle">
+            <div className="ListTitle">
                 {
                     this.state.editable
                         ? <form onBlur={this.toggleEdit}>
@@ -41,10 +41,10 @@ class ColumnTitle extends React.Component {
 }
 
 
-ColumnTitle.propTypes = {
+ListTitle.propTypes = {
     title: PropTypes.string.isRequired,
     editListTitle: PropTypes.func.isRequired,
     // id: PropTypes.string.isRequred
 };
 
-export default ColumnTitle;
+export default ListTitle;

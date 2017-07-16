@@ -1,14 +1,14 @@
 import React from 'react';
 
 import NavBar from './NavBar';
-import PageBody from './PageBody';
+import Board from './Board';
 
 class App extends React.Component {
     render () {
         return (
             <div>
                 <NavBar />
-                <PageBody />
+                <Board />
             </div>
         );
     }

@@ -1,0 +1,10 @@
+.nav {
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content:center;
+  align-items: center;
+}
+
+nav h1 {
+  font: normal 32px Pacifico, cursive;
+}

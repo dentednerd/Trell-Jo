@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './ColumnAdd.css';
+import './ListAdd.css';
 import PropTypes from 'prop-types';
 
-class ColumnAdd extends React.Component {
+class ListAdd extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
@@ -21,12 +21,12 @@ class ColumnAdd extends React.Component {
                 {
                     this.state.showForm
                     ? <form onSubmit={this.handleSubmit} >
-                        <textarea className='ColumnAddForm' onKeyPress={this.handleEnterKeyPress}/>
+                        <textarea className='ListAddForm' onKeyPress={this.handleEnterKeyPress}/>
                         <button className='button is-success' type="submit">Add</button>
-                        <a onClick={this.toggleForm} className='delete is-medium'></a>
+                        <a onClick={this.toggleForm} className='delete is-large'></a>
                     </form>
                     : <a href="#" className="AddLink" onClick={this.toggleForm}>
-                        <div className="ColumnAdd">
+                        <div className="ListAdd">
                             Add a card...
                         </div>
                     </a>
@@ -52,9 +52,9 @@ class ColumnAdd extends React.Component {
 }
 
 
-ColumnAdd.propTypes = {
+ListAdd.propTypes = {
     id: PropTypes.string.isRequired,
     updateCards: PropTypes.func.isRequired
 };
 
-export default ColumnAdd;
+export default ListAdd;

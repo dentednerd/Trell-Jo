@@ -1,4 +1,4 @@
- .AddLink .ColumnAdd {
+ .AddLink .ListAdd {
      padding:10px;
     color:#8c8c8c;
     border-radius: 3px;
@@ -8,21 +8,29 @@
     text-align:left;
 }
 
-.AddLink .ColumnAdd:hover {
+.AddLink .ListAdd:hover {
     background-color: #8c8c8c;
     color: black;
     text-decoration: underline;
 }
 
-.ColumnAddForm {
+.ListAddForm {
     width: 100%;
     font-size: 14px;
     margin-bottom: 10px;
     border-radius:3px;
     border:none;
     padding: 10px 5px;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-between;
+    align-items: center;
 }
 
 .FormBox {
-    padding: 10px
+    padding: 10px;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-between;
+    align-items: center;
 }

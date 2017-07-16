@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import ColumnCard from './ColumnCard';
 
-import './ColumnCardsList.css';
+import './ListCards.css';
 
-class ColumnCardsList extends React.Component {
+class ListCards extends React.Component {
     render () {
         return (
-            <div className='columnListBox'>
+            <div className='ListCards'>
                 {this.props.cards.map((card) => {
                     return (
                         <ColumnCard editCard={this.props.editCard} id={this.props.id} key={card.id} card={card}/>
@@ -19,10 +19,10 @@ class ColumnCardsList extends React.Component {
     }
 }
 
-ColumnCardsList.propTypes = {
+ListCards.propTypes = {
     cards: PropTypes.array.isRequired,
     editCard: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired
 };
 
-export default ColumnCardsList;
+export default ListCards;

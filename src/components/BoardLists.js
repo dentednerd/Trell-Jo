@@ -1,56 +1,56 @@
 import React from 'react';
 
 import Column from './Column';
-// import CreateColumn from './CreateColumn';
+import './BoardLists.css';
 
 import { v4 } from 'uuid';
 
-class Columns extends React.Component {
+class BoardLists extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             lists: [
                 {
                     id: v4(),
-                    title: 'title',
+                    title: 'House Stark',
                     cards: [
                         {
                             id: v4(),
-                            text: 'card1'
+                            text: 'Jon: unite the North'
                         },
                         {
                             id: v4(),
-                            text: 'card2'
+                            text: 'Sansa: ditch Littlefinger'
                         },
                         {
                             id: v4(),
-                            text: 'card3'
+                            text: 'Brienne: smooch Tormund'
                         },
                         {
                             id: v4(),
-                            text: 'card4'
+                            text: 'Davos: stay mad at Melisandre'
                         }
                     ]
                 },
                 {
                     id: v4(),
-                    title: 'title',
+                    title: 'House Targaryen',
                     cards: [
                         {
                             id: v4(),
-                            text: 'card1'
+                            text: 'Daenerys: invade Westeros'
                         },
                         {
                             id: v4(),
-                            text: 'card2'
+                            text: 'Tyrion: go to some AA meetings, dude'
                         },
                         {
                             id: v4(),
-                            text: 'card3'
+                            text: 'Varys: build alliances'
                         },
                         {
                             id: v4(),
-                            text: 'card4'
+                            text: 'Missandei: smooch Grey Worm'
                         }
                     ]
                 }
@@ -64,14 +64,12 @@ class Columns extends React.Component {
     render() {
         return (
             <div>
-                <div>
-                    <Column
-                        editListTitle={this.editListTitle}
-                        addAList={this.addAList}
-                        updateCards={this.updateCards}
-                        editCard={this.editCard}
-                        lists={this.state.lists} />
-                </div>
+                <Column
+                    editListTitle={this.editListTitle}
+                    addAList={this.addAList}
+                    updateCards={this.updateCards}
+                    editCard={this.editCard}
+                    lists={this.state.lists} />
             </div>
         );
     }
@@ -128,4 +126,4 @@ function findIndex(lists, id) {
     }
 }
 
-export default Columns;
+export default BoardLists;

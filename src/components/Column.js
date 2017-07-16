@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ColumnList from './ColumnList';
-import CreateColumn from './CreateColumn';
+import List from './List';
+import CreateList from './CreateList';
 
-import './Columns.css';
+import './Column.css';
 
 class Column extends React.Component {
     render () {
@@ -12,7 +12,7 @@ class Column extends React.Component {
             <div className="columns">
                     {this.props.lists.map((list) => {
                         return (<div className="column is-3" key={list.id}>
-                            <ColumnList 
+                            <List 
                             editListTitle={this.props.editListTitle}
                             editCard={this.props.editCard}
                             updateCards={this.props.updateCards} 
@@ -21,7 +21,7 @@ class Column extends React.Component {
                     })}
 
                 <div className="column is-3">
-                    <CreateColumn addAList={this.props.addAList}/>
+                    <CreateList addAList={this.props.addAList}/>
                 </div>
             </div>
         );

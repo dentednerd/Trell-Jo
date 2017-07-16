@@ -1,15 +1,16 @@
-.ColumnTitle h1 {
+.ListTitle h1 {
     padding:10px;
     color: black;
     font-weight: bold;
 }
 
-.ColumnTitle .editTitle {
-    margin: 10px 10px 0 10px;
-    padding: 5px;
+.ListTitle .editTitle {
+    margin: 0;
+    width:100%;
+    padding: 10px;
     color: black;
     font-weight: bold;
     font-size: 1em;
     border-radius: 3px;
-    border: 0;
+    border: none;
 }

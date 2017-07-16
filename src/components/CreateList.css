@@ -1,11 +1,12 @@
-.CreateColumnInput {
+.CreateListInput {
+    border:none;
     border-radius: 3px;
     font-size: 14px;
     width: 100%;
     padding: 10px;
 }
 
-.CreateColumnList {
+.CreateList {
         background-color: #E2E4E6;
         border-radius: 3px;
 }

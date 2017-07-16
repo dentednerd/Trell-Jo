@@ -1,15 +1,13 @@
 import React from 'react';
 
-import Menu from './Menu';
+import './BoardTitle.css';
 
-import './Title.css';
-
-class Title extends React.Component {
+class BoardTitle extends React.Component {
     constructor (props) {
         super(props);
         this.state = {
             editable: false,
-            pageTitle: 'title'
+            pageTitle: 'Game of Thrones To-Dos'
         };
         this.toggleEditable = this.toggleEditable.bind(this);
         this.editTitle = this.editTitle.bind(this);
@@ -25,7 +23,6 @@ class Title extends React.Component {
                 : <button className="button" onClick={this.toggleEditable}>{this.state.pageTitle}</button>
                 
                 }
-            <Menu />
             </div>
         );
     }
@@ -43,4 +40,4 @@ class Title extends React.Component {
     }
 }
 
-export default Title;
+export default BoardTitle;

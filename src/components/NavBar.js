@@ -1,19 +1,13 @@
 import React from 'react';
 
+import './NavBar.css';
+
 class NavBar extends React.Component {
     render () {
         return (
             <div>
                 <nav className="nav">
-                    <div className="nav-left">
-                        <a className="nav-item" href="#">Item</a> 
-                    </div>
-                    <div className="nav-center">
-                        <a className="nav-item" href="#">Item</a> 
-                    </div>
-                    <div className="nav-right">
-                        <a className="nav-item" href="#">Item</a> 
-                    </div>
+                    <h1>Trell-Jo</h1>
                 </nav>
             </div>
         );
