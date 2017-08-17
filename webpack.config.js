@@ -12,7 +12,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: PATHS.public,
-        publicPath: '/'
+        publicPath: '/Trell-Jo/'
     },
     
     module: {
